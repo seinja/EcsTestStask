@@ -1,7 +1,6 @@
 using UnityEngine;
 using Leopotam.EcsLite;
 using Voody.UniLeo.Lite;
-using System;
 
 public class EcsStartUp : MonoBehaviour
 {
@@ -42,11 +41,13 @@ public class EcsStartUp : MonoBehaviour
     private void AddAndInitSystems()
     {
         _systems
-            .Add(new InputSystem())
             .Add(new ModelsCommunicationSystem())
+            .Add(new InputSystem())
             .Add(new ModelMoveSystem())
             .Add(new PlayerMoveSystem())
             .Add(new PlayerAnimationSystem())
+            .Add(new ButtonCollisionSystem())
+            .Add(new DoorOpeningSystem())
             .Init();
     }
 }
