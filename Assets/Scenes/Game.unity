@@ -655,7 +655,8 @@ PrefabInstance:
       propertyPath: value.ButtonTransform
       value: 
       objectReference: {fileID: 1950628233}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 590428354503117073, guid: fcec8ad45eb69d64bb0735a5c04682f9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fcec8ad45eb69d64bb0735a5c04682f9, type: 3}
 --- !u!4 &1240024424 stripped
 Transform:
@@ -1076,7 +1077,8 @@ PrefabInstance:
       propertyPath: value.ButtonTransform
       value: 
       objectReference: {fileID: 1240024424}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 590428354503117073, guid: fcec8ad45eb69d64bb0735a5c04682f9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fcec8ad45eb69d64bb0735a5c04682f9, type: 3}
 --- !u!1 &1701231852
 GameObject:
@@ -1458,5 +1460,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4363553019382572999, guid: 910d7f66e25d67c4e8ef9a7098da4632, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 910d7f66e25d67c4e8ef9a7098da4632, type: 3}
