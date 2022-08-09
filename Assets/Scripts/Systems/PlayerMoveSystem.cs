@@ -6,6 +6,7 @@ public class PlayerMoveSystem : IEcsRunSystem
     public void Run(IEcsSystems systems)
     {
         var world = systems.GetWorld();
+        var gameData = systems.GetShared<GameData>();
 
         var filter = world.Filter<PlayerComponent>().Inc<ModelPositionComponent>().End();
 
@@ -20,8 +21,8 @@ public class PlayerMoveSystem : IEcsRunSystem
             var transform = modelComponent.PlayerTransform;
             var modelTransform = modelComponent.ModelTransform;
 
-            var speed = 5f * Time.deltaTime;
-            var rotationSpeed = 400f * Time.deltaTime;
+            var speed = gameData.Config.PlayerMoveSpeed * Time.deltaTime;
+            var rotationSpeed = gameData.Config.PlayerRotationSpeed * Time.deltaTime;
 
             modelComponent.IsMoving = directionComponet.OffSet.magnitude > 0.1f;
 

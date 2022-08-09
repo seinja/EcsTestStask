@@ -31,12 +31,10 @@ public class ButtonCollisionSystem : IEcsRunSystem
             {
                 buttonComponent.InitialPosition = buttonComponent.DoorTransform.position;
                 buttonComponent.IsPressed = true;
-                Debug.Log(true);
             }
             else
             {
                 buttonComponent.IsPressed = false;
-                Debug.Log(false);
             }
         }
     }

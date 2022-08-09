@@ -7,11 +7,16 @@ public class EcsStartUp : MonoBehaviour
     private EcsWorld _world;
     private EcsSystems _systems;
 
+    [SerializeField] private ConfigurationSO _configuration;
+
     private void Start()
     {
         _world = new EcsWorld();
 
-        _systems = new EcsSystems(_world);
+        var gameData = new GameData();
+        gameData.Config = _configuration;
+
+        _systems = new EcsSystems(_world, gameData);
 
         _systems.ConvertScene();
 
