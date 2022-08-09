@@ -8,4 +8,7 @@ public class ConfigurationSO : ScriptableObject
 
     public float PlayerMoveSpeed = 3.5f;
     public float PlayerRotationSpeed = 350f;
+
+    public float MovingOffSet = 0.1f;
+    public float ButtonOffSet = 1f;
 }

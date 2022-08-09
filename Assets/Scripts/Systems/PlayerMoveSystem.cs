@@ -24,7 +24,7 @@ public class PlayerMoveSystem : IEcsRunSystem
             var speed = gameData.Config.PlayerMoveSpeed * Time.deltaTime;
             var rotationSpeed = gameData.Config.PlayerRotationSpeed * Time.deltaTime;
 
-            modelComponent.IsMoving = directionComponet.OffSet.magnitude > 0.1f;
+            modelComponent.IsMoving = directionComponet.OffSet.magnitude > gameData.Config.MovingOffSet;
 
             if (!modelComponent.IsMoving) return;
 

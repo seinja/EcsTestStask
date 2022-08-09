@@ -15,7 +15,7 @@ public class PlayerAnimationSystem : IEcsRunSystem
             ref var animationComponent = ref animationPool.Get(entity);
             ref var playerComponent = ref playerPool.Get(entity);
 
-            animationComponent.Animator.SetBool("IsMoving", playerComponent.IsMoving);
+            animationComponent.Animator.SetBool(Constants.IsMoving, playerComponent.IsMoving);
         }
     }
 }

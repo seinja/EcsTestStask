@@ -8,6 +8,7 @@ public class ButtonCollisionSystem : IEcsRunSystem
     public void Run(IEcsSystems systems)
     {
         var world = systems.GetWorld();
+        var gameData = systems.GetShared<GameData>();
 
         var playerFilter = world.Filter<ModelPositionComponent>().End();
         var playerPool = world.GetPool<ModelPositionComponent>();
@@ -27,7 +28,7 @@ public class ButtonCollisionSystem : IEcsRunSystem
 
             var distance = Vector3.Distance(_privatePlayerPosition, buttonComponent.ButtonTransform.position);
 
-            if (distance < 1f)
+            if (distance < gameData.Config.ButtonOffSet)
             {
                 buttonComponent.InitialPosition = buttonComponent.DoorTransform.position;
                 buttonComponent.IsPressed = true;

@@ -28,7 +28,7 @@ public class InputSystem : IEcsRunSystem
 
         if (Physics.Raycast(mousePosition, out RaycastHit hit)) 
         {
-            if (!hit.collider.gameObject.CompareTag("Ground")) return;
+            if (!hit.collider.gameObject.CompareTag(Constants.GroundTag)) return;
 
             _targetDestination = hit.point;
         }
