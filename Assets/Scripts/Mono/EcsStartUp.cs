@@ -46,6 +46,7 @@ public class EcsStartUp : MonoBehaviour
             .Add(new ModelsCommunicationSystem())
             .Add(new ModelMoveSystem())
             .Add(new PlayerMoveSystem())
+            .Add(new PlayerAnimationSystem())
             .Init();
     }
 }
